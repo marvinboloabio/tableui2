@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/2ddee5f752.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#btnOpenForm").click(function () {
+                $("#divPanel").slideToggle("slow");
+            });
+        });
+
+
+
+
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        #btnOpenForm {
+            border: none;
+            color: white;
+            background-color: #575757;
+            padding: 18px 32px;
+            border-radius: 40px;
+        }
+
+
+        #divFlip {
+            padding: 20px;
+            text-align: center;
+
+            border: solid 1px #c3c3c3;
+            color: white;
+            font-size: 18px;
+        }
+
+        #divPanel {
+            padding: 50px;
+            display: none;
+
+        }
+
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .divTableContainer {
+            width: 80%;
+            margin-top: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            position: relative;
+
+
+        }
+
+        table {
+            border: 1px #575757;
+            font-size: .9em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+            width:100%;
+            border-collapse: collapse;
+            border-radius: 5px;
+            overflow:hidden;
+            
+        }
+
+        thead {
+            font-weight: bold;
+            color: #fff;
+            background: #575757;
+            width: 100%;
+            height: 70px;
+
+        }
+
+        td,
+        th {
+            padding: 1em 4em;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+
+
+        a {
+            color: #575757;
+        }
+
+        /* 
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+} */
+
+        #frmUser {
+            width: 100%;
+            height: 100%;
+        }
+
+        #txtFirstname,
+        #txtLastname,
+        #txtEmail,
+        #txtPhone,
+        #txtDate,
+        #txtAge {
+            width: 100%;
+            border: solid 1px #c3c3c3;
+            height: 50px;
+
+            margin-top: 15px;
+            padding-left: 10px;
+            border-radius: 4px;
+            background-color: white;
+        }
+
+        #txtFirstname,
+        #txtLastname,
+        #txtEmail,
+        #txtPhone,
+        #txtDate ::placeholder {
+            font-weight: bold;
+            color: #000;
+        }
+
+        #btnSubmit {
+            padding: 18px 32px;
+            border: none;
+            color: white;
+            background-color: #575757;
+            border-radius: 4px;
+
+            font-size: 16px;
+        }
+
+        #btnClear {
+            padding: 18px 32px;
+            border: 2px solid #575757;
+            color: #575757;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            margin-left: 15px;
+        }
+
+        .divBtnSubmitContainer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            margin-top: 40px;
+            
+        }
+
+        #tdIcons>i {
+            font-size: 20px;
+            font-weight: normal;
+            margin-left: 5px;
+            color: #575757;
+        }
+
+        #tdIcons>i:hover {
+            color: #000;
+            ;
+        }
+
+        .divInputGroupContainer{
+            display:flex;
+            justify-content:space-evenly;
+            align-items:center;
+        }
+
+        .divInputGroup1{
+            width:40%;
+
+        }
+
+        .divInputGroup2{
+            width:40%;
+            
+        }
+
+        @media all and (max-width: 768px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            th {
+                text-align: right;
+            }
+
+            table {
+                position: relative;
+                padding-bottom: 0;
+                border: none;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+                display: none;
+
+
+            }
+
+            thead {
+                float: left;
+                white-space: nowrap;
+            }
+
+            tbody {
+                overflow-x: auto;
+                overflow-y: hidden;
+                position: relative;
+                white-space: nowrap;
+            }
+
+            tr {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            th {
+                border-bottom: 1px solid #575757;
+            }
+
+            td {
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <div class="divTableContainer">
+
+            <div style="width:100%;display:flex;flex-direction:column;">
+                <div id="divFlip" onclick="txtToggle()"><button id="btnOpenForm">Open Form</button></div>
+                <div id="divPanel">
+                    <form action="" id="frmUser">
+                        <div class="divInputGroupContainer">
+                            <div class="divInputGroup1">
+                                <input type="text" name="fname" placeholder="Firstname" id="txtFirstname" required>
+                                <input type="text" name="Lname" placeholder="Lastname" id="txtLastname" required>
+                                <input type="email" name="email" placeholder="Email" id="txtEmail" required>
+                            </div>
+                            <div class="divInputGroup2">
+                                <input type="number" name="phone" placeholder="Phone" id="txtPhone" required>
+                                <input type="number" name="age" placeholder="Age" id="txtAge" required>
+                                <input type="date" name="date" placeholder="Date" id="txtDate" required>
+                            </div>
+                        </div>
+                        <div class="divBtnSubmitContainer">
+                            <input type="submit" value="Submit" id="btnSubmit">
+                            <input type="button" value="Clear" id="btnClear" onclick="txtClear()">
+                        </div>
+                    </form>
+                </div>
+
+
+                <!-- <input type="text" placeholder="Search...." id="myInput"
+                    style="border:none;height:40px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;width:18%;padding-left:10px;font-size:16px;border-radius:10px 0 0 10px;"> -->
+                <!-- <button
+                    style="background-color:#575757;border:none;height:40px;width:50px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border-radius:0 10px 10px 0;"><i
+                        class="fa fa-search" style="color:white;font-size:24px;"></i></button> -->
+            </div>
+
+            <table id="tableUsers">
+
+
+                <tr>
+                    <thead>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Age</th>
+                        <th>Date of Birth</th>
+                        <th>Action</th>
+                    </thead>
+
+                </tr>
+                <tbody id="myTable">
+                    <tr>
+                        <td>James</td>
+                        <td>Matman</td>
+                        <td><a href="mailto:jmatman@stewart.com">jmatman@stewart.com</a></td>
+                        <td>(713) 123-8965</td>
+                        <td>23</td>
+                        <td>01/13/1979</td>
+                        <td id="tdIcons"><i class="far fa-edit" style="font-size:20px;color:#575757;margin-left:5px;"
+                                id="myBtn" data-toggle="modal" data-target="#myModal"></i><i class="fas fa-trash-alt"
+                                style="font-size:20px;color:#575757;margin-left:5px;" onclick="DeleteRows()"> </i></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Johnny</td>
+                        <td>Smith</td>
+                        <td><a href="mailto:jsmith@stewart.com">jsmith@stewart.com</a></td>
+                        <td>(713) 584-9614</td>
+                        <td>23</td>
+                        <td>06/09/1971</td>
+                        <td id="tdIcons"><i class="far fa-edit" style="font-size:20px;color:#575757;margin-left:5px;"
+                                id="myBtn" data-toggle="modal" data-target="#myModal"></i><i class="fas fa-trash-alt"
+                                style="font-size:20px;color:#575757;margin-left:5px;" onclick="DeleteRows()"> </i></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Susan</td>
+                        <td>Johnson</td>
+                        <td><a href="mailto:sjohnson@stewart.com">sjohnson@stewart.com</a></td>
+                        <td>(713) 847-1124</td>
+                        <td>23</td>
+                        <td>08/25/1965</td>
+                        <td id="tdIcons"><i class="far fa-edit" style="font-size:20px;color:#575757;margin-left:5px;"
+                                id="myBtn" data-toggle="modal" data-target="#myModal"></i><i class="fas fa-trash-alt"
+                                style="font-size:20px;color:#575757;margin-left:5px;" onclick="DeleteRows()"> </i></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tracy</td>
+                        <td>Richardson</td>
+                        <td><a href="mailto:trichard@stewart.com">trichard@stewart.com</a></td>
+                        <td>(713) 245-4821</td>
+                        <td>23</td>
+                        <td>03/13/1980</td>
+                        <td id="tdIcons"><i class="far fa-edit" style="font-size:20px;color:#575757;margin-left:5px;"
+                                id="myBtn" data-toggle="modal" data-target="#myModal"></i><i class="fas fa-trash-alt"
+                                style="font-size:20px;color:#575757;margin-left:5px;" onclick="DeleteRows()"> </i></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tracy</td>
+                        <td>Richardson</td>
+                        <td><a href="mailto:trichard@stewart.com">trichard@stewart.com</a></td>
+                        <td>(713) 245-4821</td>
+                        <td>23</td>
+                        <td>03/13/1980</td>
+                        <td id="tdIcons"><i class="far fa-edit" style="font-size:20px;color:#575757;margin-left:5px;"
+                                id="myBtn" data-toggle="modal" data-target="#myModal"></i><i class="fas fa-trash-alt"
+                                style="font-size:20px;color:#575757;margin-left:5px;" onclick="DeleteRows()"> </i></i>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit User</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="fname">Firstname:</label>
+                                <input type="text" class="form-control" id="txtFirstname" placeholder="Firstname..."
+                                    name="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lname">Lastname:</label>
+                                <input type="text" class="form-control" id="txtLastname" placeholder="Lastname..."
+                                    name="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="txtEmail" placeholder="Enter email..."
+                                    name="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="number" class="form-control" id="txtPhone" placeholder="Phone..."
+                                    name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="date">Date:</label>
+                                <input type="date" class="form-control" id="txtDate" placeholder="Date..." name="date">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" id="btnSubmit">Submit</button>
+                            <button type="button" class="btn btn-primary" id="btnClear"
+                                onclick="Clearbutton()">Clear</button>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="index.js">
+
+        </script>
+</body>
+</main>
+
+</html>
